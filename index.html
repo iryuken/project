@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryuken | Cyber Security Student</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .answer {
+      display: none;
+      font-size: 1.5rem;
+      color: #e74c3c; /* Discord-like red color */
+      margin-top: 20px;
+      font-weight: bold;
+      animation: reveal 0.5s ease-in-out;
+    }
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-reveal {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container text-center mt-5 intro-section">
+    <h1 class="display-4">Hi, I'm <span class="name">Ryuken</span></h1>
+    <h2 class="aka">aka Eshwar</h2>
+    <p class="lead mt-4">🎓 I'm currently pursuing <strong>Computer Science and Engineering</strong> with a specialization in <strong>Cyber Security</strong> at <strong>SNIST</strong> (Sreenidhi Institute of Science and Technology).</p>
+    <p class="text-muted">well I hate many things</p>
+    <p class="lead mt-4">What Did the annoyed chicken say 🐔 ??</p>
+
+    <!-- Button to reveal the answer -->
+    <button class="btn btn-primary btn-reveal" onclick="revealAnswer()">Reveal</button>
+
+    <!-- Hidden answer that will be revealed -->
+    <p class="answer" id="answer">Fawkofff!!!</p>
+  </div>
+
+  <script>
+    function revealAnswer() {
+      const answer = document.getElementById('answer');
+      answer.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
