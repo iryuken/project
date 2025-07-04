@@ -2,57 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryuken | Cyber Security Student</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ryuken - Quincy Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
-    .answer {
-      display: none;
-      font-size: 1.5rem;
-      color: #e74c3c; /* Discord-like red color */
-      margin-top: 20px;
-      font-weight: bold;
-      animation: reveal 0.5s ease-in-out;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    @keyframes reveal {
-      0% {
-        opacity: 0;
-        transform: translateY(-10px);
+    body {
+      background-color: #fef6e4;
+      background-image: 
+        linear-gradient(#fcd5ce 1px, transparent 1px),
+        linear-gradient(90deg, #fcd5ce 1px, transparent 1px);
+      background-size: 40px 40px;
+      font-family: 'Comic Neue', cursive;
+      color: #333;
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 220px 1fr 220px;
+      gap: 20px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .sidebar, .sidebox, .main {
+      background: #fff;
+      border: 3px dashed #ffb703;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 4px 4px 0 #ffb703;
+    }
+
+    .sidebar h3,
+    .sidebox h4 {
+      text-align: center;
+      color: #fb8500;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: #0077b6;
+      margin: 10px 0;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+      color: #023047;
+    }
+
+    .main h1 {
+      font-size: 3rem;
+      color: #ff006e;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .main h2 {
+      font-size: 1.6rem;
+      color: #8338ec;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .joke {
+      background: #ffd6ff;
+      border: 2px dotted #ff4d6d;
+      color: #d00000;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+    }
+
+    .joke strong {
+      color: #6a040f;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .sidebox p {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .sidebox span {
+      color: #ef233c;
+      font-size: 1.4rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 1024px) {
+      .wrapper {
+        grid-template-columns: 200px 1fr;
       }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+
+      .sidebox {
+        display: none;
       }
     }
 
-    .btn-reveal {
-      margin-top: 20px;
+    @media screen and (max-width: 768px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        order: -1;
+        margin-bottom: 20px;
+      }
+
+      .main h1 {
+        font-size: 2.3rem;
+      }
+
+      .main h2 {
+        font-size: 1.4rem;
+      }
+
+      .main p, .sidebar a {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .main h1 {
+        font-size: 2rem;
+      }
+
+      .main h2 {
+        font-size: 1.2rem;
+      }
+
+      .main p, .sidebar a, .sidebox p {
+        font-size: 1rem;
+      }
+
+      .sidebar h3, .sidebox h4 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="wrapper">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <a href="#">Du Du Du</a>
+      <a href="https://www.instagram.com/ryuzaki.racist/">Racist App</a>
+      <a href="https://github.com/1ryuken">Cat which keeps my projects</a>
+      <a href="https://www.linkedin.com/in/eshwarsaisajja/">ShowOFF App</a>
+      <a href="#">Hmm..</a>
+    </div>
 
-  <div class="container text-center mt-5 intro-section">
-    <h1 class="display-4">Hi, I'm <span class="name">Ryuken</span></h1>
-    <h2 class="aka">aka Eshwar</h2>
-    <p class="lead mt-4">🎓 I'm currently pursuing <strong>Computer Science and Engineering</strong> with a specialization in <strong>Cyber Security</strong> at <strong>SNIST</strong> (Sreenidhi Institute of Science and Technology).</p>
-    <p class="text-muted">well I hate many things</p>
-    <p class="lead mt-4">What Did the annoyed chicken say 🐔 ??</p>
+    <!-- Main Content -->
+    <div class="main">
+      <h1>ESHWAR / RYUKEN</h1>
+      <h2>霊弓使い | Quincy Cyber Samurai</h2>
 
-    <!-- Button to reveal the answer -->
-    <button class="btn btn-primary btn-reveal" onclick="revealAnswer()">Reveal</button>
+      <p>Yo! I'm <strong style="color:#ff006e;">Eshwar</strong>, also known as <strong style="color:#ff006e;">Ryuken</strong> — inspired by the classy Quincy Ryuken Ishida from Bleach 💜</p>
+      <p>🎓 Deep in the realm of <strong>Computer Science & Engineering</strong>,on <strong>Cyber Security</strong> @ SNIST.</p>
+      <p>I vibe with anime, weird internet holes, and building funky things that shouldn't work but do 😄</p>
+      <p>Dislikes? Let’s just say that info is <em>top secret</em>.</p>
 
-    <!-- Hidden answer that will be revealed -->
-    <p class="answer" id="answer">Fawkofff!!!</p>
+      <div class="joke">
+        <strong>🐔 What did the annoyed chicken say?</strong>
+        <p><em>Fawkofff!!!</em></p>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebox">
+      <h4>Status</h4>
+      <p><em>Alive & Kicking.</em></p>
+      <p><strong>Now Playing:</strong><br>Lose Yourself<br>– Eminem 🎧</p>
+      <p><strong>Visitors:</strong><br><span>0000</span></p>
+    </div>
   </div>
 
-  <script>
-    function revealAnswer() {
-      const answer = document.getElementById('answer');
-      answer.style.display = 'block';
-    }
-  </script>
+  <footer>
+    ryuken@2025 🌱
+    <br>
+    <img src="https://cyber.dabamos.de/88x31/knbutton.gif">
+   <img src="https://ranfren.neocities.org/mailput.gif">
+    <a href="https://cyber.dabamos.de/88x31/imac.gif">
+      <img src="https://ranfren.neocities.org/banner.gif"></a>
+      <img src="https://cyber.dabamos.de/88x31/nc_silicon.gif">
+      <img src="https://ranfren.neocities.org/neocities_button.gif">
+      <a href="https://hellosailor.neocities.org/portbanners.html">
+        <img src="https://ranfren.neocities.org/resin.png"></a>
+        <img src="https://cyber.dabamos.de/88x31/nodrugs.gif">
+        <img src="https://alyx.sh/images/hrt-geocities-buttons/tc-88x31.gif">
+        <img src="https://ranfren.neocities.org/camtime.png">
+        <img src="https://cyber.dabamos.de/88x31/power-button.gif">
+        <img src="https://ranfren.neocities.org/neko.gif">
+        <img src="https://ranfren.neocities.org/wwwbutton.gif"><br>
+        <img src="https://cyber.dabamos.de/88x31/internet-roadkill.gif">
+        <img src="https://cyber.dabamos.de/88x31/tohell.gif">
+        <img src="https://cyber.dabamos.de/88x31/amd_powered.gif">
+        <img src="https://88x31.nl/gifs/reshirii.gif">
+        <img src="https://88x31.nl/gifs/volta.gif">
+        <img src="https://ranfren.neocities.org/aflag2.jpg">
+        <img src="https://ranfren.neocities.org/transflagjp.jpg">
+  </footer>
 </body>
 </html>
